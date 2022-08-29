@@ -2,3 +2,4 @@
 All 5 letter strings
 
 useful for wordles also there are no duplicates
+# 1712305 items
