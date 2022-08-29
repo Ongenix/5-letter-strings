@@ -2,3 +2,5 @@
 All 5 letter strings
 
 useful for wordles
+## .
+no duplicates
