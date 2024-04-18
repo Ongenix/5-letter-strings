@@ -1,1 +1,1 @@
-alert(5)
+alert(6)
