@@ -9,6 +9,7 @@
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // @grant        GM.xmlHttpRequest
 // @connect      *
+// @noframes
 // @run-at       document-end
 // ==/UserScript==
 
