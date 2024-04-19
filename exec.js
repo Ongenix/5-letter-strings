@@ -1,13 +1,3 @@
-// ==UserScript==
-// @name         Discord Webhook on Mouse Move
-// @namespace    http://tampermonkey.net/
-// @version      0.1
-// @description  Send a message to a Discord webhook when the mouse moves
-// @author       Your Name
-// @match        https://example.com/*  // Replace with the appropriate URL
-// @grant        GM_xmlhttpRequest
-// ==/UserScript==
-
 (function() {
     'use strict';
 
