@@ -1,1 +1,1 @@
-alert(9)
+window.location = window.location + "#1=1"
