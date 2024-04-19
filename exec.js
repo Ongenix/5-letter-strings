@@ -1,1 +1,1 @@
-window.location = window.location + "#1=1"
+window.location = window.location + "#2=2"
