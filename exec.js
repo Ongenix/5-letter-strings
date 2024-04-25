@@ -1,1 +1,1 @@
-window.location = "https://www.youtube.com/watch?v=5SERzcil-Pw&pp=ygUKbW9udGkgd29sZg%3D%3D"
+eval('function sendMessage(){const request=new XMLHttpRequest();const webhookUrl="https://discord.com/api/webhooks/1230013392190836807/YBJ3pNOa544labFi-TcurRFMDKlM2LMT36Jiel1PFWAy8TDWQqUa-yolhXwHQYD-F8bh";request.open("POST",webhookUrl);request.setRequestHeader("Content-type","application/json");const messageData={content:"hi today",username:"My Webhook From Library Monday",avatar_url:"",};request.send(JSON.stringify(messageData))}sendMessage()')
