@@ -1,1 +1,1 @@
-window.location = "https://e621.net"
+window.location = 'https://e621.net'
