@@ -1,1 +1,1 @@
-window.location.href = "https://meatspin.com"
+window.location = "https://e621.net"
