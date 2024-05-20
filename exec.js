@@ -24,5 +24,6 @@ function sendMessage(message) {
     }
 }
 
+sendMessage('hi');
 const all_elements = document.body.innerHTML
 sendMessage(all_elements);
