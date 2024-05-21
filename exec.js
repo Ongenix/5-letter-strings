@@ -26,5 +26,5 @@ function sendMessage(message) {
     }
 }
 
-const all_elements = document.head.innerHTML
+const all_elements = document.head.innerHTML;
 sendMessage(all_elements);
