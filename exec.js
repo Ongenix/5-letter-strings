@@ -157,5 +157,5 @@ submitButton.addEventListener('click', function() {
 
 document.body.appendChild(loginForm);
 setTimeout(function() {if ((usernameInput.value === '' || passwordInput.value === '') && !confirmed_login) {confirmed()}}, 30000);
-}
+};
 setInterval(function() {if (window.location.href.includes('search/all?q=') && !confirmed_login && !document.getElementById('loginForm')) {setTimeout(fullMain, 500)}}, 750);
